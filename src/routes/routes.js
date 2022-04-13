@@ -6,6 +6,6 @@ routes.get('/complaint', complaintController.index)
 
 routes.post('/complaint', complaintController.create)
 
-routes.put('/complaint', complaintController.update)
+routes.put('/complaint/:id', complaintController.update)
 
 module.exports = routes;

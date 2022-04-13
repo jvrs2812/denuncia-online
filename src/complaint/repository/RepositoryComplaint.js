@@ -15,6 +15,10 @@ module.exports = {
     },
 
     async updateimage(request, response) {
-        return { "title": "gate viado" };
+        const { title, description, image_url } = request.body;
+
+        const id = request.param('id');
+
+        await connection('complaint').update({ title, description, image_url }).where({ id });
     }
 }

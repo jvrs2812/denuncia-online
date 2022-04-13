@@ -14,6 +14,12 @@ module.exports = {
     },
 
     async update(request, response) {
-        return response.json(await complaintRepository.updateimage())
+        try {
+            await complaintRepository.updateimage(request, response);
+            return response.status(204).json()
+        } catch (err) {
+            console.log(err)
+            return response.status(500).json({ "error": "2312x23 contate o administrador" })
+        }
     }
 }

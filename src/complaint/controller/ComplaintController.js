@@ -11,5 +11,9 @@ module.exports = {
 
 
         return response.json(await complaintRepository.create(request, response));
+    },
+
+    async update(request, response) {
+        return response.json(await complaintRepository.updateimage())
     }
 }

@@ -15,6 +15,6 @@ module.exports = {
     },
 
     async updateimage(request, response) {
-
+        return { "title": "gate viado" };
     }
 }

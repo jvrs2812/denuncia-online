@@ -15,4 +15,4 @@ app.use(function (req, res, next) {
 
 app.use(routes)
 
-app.listen(3000)
+app.listen(process.env.PORT || 5000)
